@@ -62,7 +62,7 @@
               $("#train-name-display").html(sv.trainName);
               $("#destination-display").html(sv.destination);
               $("#frequency-display").html(sv.frequency);
-              $("#next-arrival-display").html(sv.nextArrival);
+              
         
            
                     
@@ -96,7 +96,12 @@
      // Minute Until Train
      //var tMinutesTillTrain = tFrequency - tRemainder;
     // console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
+    // $("#min-away-display").html(tMinuesTillTrain);
  
      // Next Train
      //var nextTrain = moment().add(tMinutesTillTrain, "minutes");
      //console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
+     //$("#next-arrival-display").html(nextTrain);
+
+
+    
