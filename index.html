@@ -5,7 +5,7 @@
   <head>
 
     <meta charset="UTF-8">
-    <title>Employee Tracker</title>
+    <title>Train Tracker</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Firebase Reference -->
-    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
 
     <!-- Moment.js Reference -->
     <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
@@ -23,7 +23,7 @@
 
   <body>
 
-    <!-- Employee Tracker -->
+    <!-- Train Tracker -->
     <div class="container">
 
       <!-- Jumbotron -->
@@ -42,30 +42,35 @@
                       <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
                     </div>
                     <div class="panel-body">
-                      <table class="table table-hover" id='train-table'>
+                      <table class="table table-hover" id="train-table">
                         <thead>
                           <tr>
-                            <th>Train Name</th>
+                            <th id="train-display">Train Name</th>
                             <th>Destination</th>
                             <th>Frequency</th>
                             <th>Next Arrival</th>
                             <th>Minutes Away</th>
                           </tr>
+                          <tr>
+                          <h2 id="train-name-display"></h2>
+                          <h4 id="destination-display"></h4>
+                          <h4 id="frequency-display"></h4>
+                          <h4 id="next-arrival-display"></h4>
+                          <h4 id="min-away-display"></h4>
+                        </tr>
                         </thead>
-                        <tbody>
-                        </tbody>
+                        
                       </table>
                     </div>
                   </div>
 
 
-  <!-- Add Employee  -->
+  <!-- Add Train  -->
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title"><strong>Add Train</strong></h3>
     </div>
     <div class="panel-body">
-
       <!-- Entry Form -->
       <form>
         <div class="form-group">
@@ -78,10 +83,10 @@
         </div>
         <div class="form-group">
           <label for="first-train-input">First Train Time (HH:mm - military time)</label>
-          <input class="form-control" id="first-train-input" type="text">
+          <input class="form-control" id=-first-train-input" type="text">
         </div>
         <div class="form-group">
-          <label for="frequency-input">Monthly Rate</label>
+          <label for="frequency-input">Frequency (Min) </label>
           <input class="form-control" id="frequency-input" type="text">
         </div>
         <button class="btn btn-primary" id="add-train-btn" type="submit">Submit</button>
@@ -98,7 +103,7 @@
 </div>
 
 <!-- JavaScript -->
-<script src="timesheetLogic.js"></script>
+<script src="assets/javascript/trainjs.js"></script>
 
 </body>
 
