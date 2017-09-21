@@ -35,9 +35,9 @@
     frequency = $("#frequency-input").val().trim();
 
     database.ref().push({
-     train name: trainName,
+     name: trainName,
      destination: destination,
-     next arrival: nextArrival,
+     arrival: nextArrival,
      frequency: frequency,
      dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
