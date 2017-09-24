@@ -17,7 +17,9 @@
 
     <!-- Moment.js Reference -->
     <!-- <script src="http://momentjs.com/downloads/moment.js"></script>   -->
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+  
 
   </head>
 
@@ -42,29 +44,25 @@
                       <h3 class="panel-title"><strong>Current Train Schedule</strong></h3>
                     </div>
                     <div class="panel-body">
-                      <table class="table table-hover" id="train-table">
-                        <thead>
-                          <tr>
-                            <th id="train-display">Train Name</th>
-                            <th>Destination</th>
-                            <th>Frequency</th>
-                            <th>Next Arrival</th>
-                            <th>Minutes Away</th>
-                          </tr>
-                          <tr>
-                          <h2 id="train-name-display"></h2>
-                          <h4 id="destination-display"></h4>
-                          <h4 id="frequency-display"></h4>
-                          <h4 id="next-arrival-display"></h4>
-                          <h4 id="min-away-display"></h4>
-                        </tr>
-                        </thead>
-                        
-                      </table>
+                      <table class="table table-hover" id="schedule-table">
+                        <div class="panel-body">
+                          <thead>
+                              <tr>
+                                <th>Train Name</th>
+                                <th>Destination</th>
+                                <th>Frequency (min)</th>
+                                <th>Next Arrival</th>
+                                <th>Minutes Away</th>
+                              </tr>
+                            </thead>
+                            <tbody id= "added-trains">    
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-
-
+            
+               
   <!-- Add Train  -->
   <div class="panel panel-primary">
     <div class="panel-heading">
@@ -83,7 +81,7 @@
         </div>
         <div class="form-group">
           <label for="first-train-input">First Train Time (HH:mm - military time)</label>
-          <input class="form-control" id=-first-train-input" type="text">
+          <input class="form-control" id= "first-train-input" type="text">
         </div>
         <div class="form-group">
           <label for="frequency-input">Frequency (Min) </label>
