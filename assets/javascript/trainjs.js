@@ -75,7 +75,7 @@ $(document).ready(function() {
     destination: destination,
     frequency: frequency,
     nextTrain: nextTrain,
-    tMinutesTillTrain: tMinutesTillTrain,
+    tMinutesTillTrain: tMinutesTillTrain
    }
 
    database.ref().push(newTrain);
